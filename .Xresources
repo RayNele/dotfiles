@@ -1,0 +1,28 @@
+*.font: xft:Overpass Mono:size=10,xft:Font Awesome 5 Free:size=10
+
+Xft.dpi:                        96
+Xft.antialias:                  1
+Xft.autohint:                   1
+Xft.hinting:                    1
+Xft.hintstyle:                  hintslight
+Xft.lcdfilter:                  lcdlight
+Xft.rgba:                       rgba
+
+URxvt*termName:                 rxvt-256color
+! transparency
+! URxvt.transparent: 		true
+! URxvt.shading:		30
+URxvt.depth: 			32
+URxvt.background: 		rgba:0000/0000/0200/c800
+
+URxvt*lineSpace:                1
+URxvt.letterSpace:              -1
+URxvt.iso14755:                 false
+URxvt.iso14755_52:              false
+URxvt*geometry:                 65x17
+URxvt.scrollBar:                false
+URxvt*loginShell:               false
+! URxvt.internalBorder:           25
+URxvt.perl-ext:	 		default,matcher
+URxvt.url-launcher:             google-chrome-stable
+URxvt.matcher.button: 		1

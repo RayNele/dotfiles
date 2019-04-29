@@ -1,3 +1,8 @@
+[colors]
+background = #2F2E34
+foreground = ${xrdb:color2:#222}
+primary = ${xrdb:color7:#222}
+secondary = #363A3F 
 [bar/bar]
 
 font-0 = "Overpass Mono:pixelsize=10;2.25"
@@ -27,13 +32,7 @@ module-margin = 0
 
 modules-left = i3 wireless-network
 modules-center = date
-modules-right = spotify alsa battery
-
-[colors]
-background = #2F2E34
-foreground = ${xrdb:color2}
-primary = ${xrdb:color7}
-secondary = #363A3F 
+modules-right = spotify alsa battery 
 
 [module/spotify]
 type = custom/script
@@ -79,10 +78,12 @@ type = internal/network
 interface = wlo1
 ;seconds to sleep between updates
 interval = 1
-label-connected = %essid% (%local_ip%) 
+label-connected = %essid% (%local_ip%)
+label-connected-padding = 1 
 label-connected-foreground = ${colors.primary}
 label-disconnected = not connected
 label-disconnected-foreground = #FC3232
+label-disconnected-padding = 1
 
 [module/i3]
 strip-wsnumbers = true

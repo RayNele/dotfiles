@@ -162,23 +162,6 @@ gaps outer 0
 # Open dmenu 
 bindsym $mod+d exec dmenu_run -fn 'Overpass Mono:pixelsize=15' -l 3 -nf '$fg' -sf '$dmenubackground' -nb '$unfocused_border' -sb '$primary'                          
  
-# Apply .Xresource. 
-exec_always --no-startup-id xrdb ~/.Xresources
-
-# Apply the last colorscheme generated without changing the background by using -n 
-exec_always --no-startup-id wal -R
-
-# Apply a background different than the one used by wal
-# If this isn't needed, remove it and remove -n flag from the above command
-# exec_always --no-startup-id feh --bg-fill ~/Pictures/Wal/bg2.jpg
-
-# Execute polybar on launch. Script kills current ones on i3 refresh, otherwise they duplicate
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-# exec_always --no--startup-id polybar bar &
-
-# Execute compton on launch
-exec_always --no-startup-id compton --config ~/.config/compton.conf
-
 # Set $mod + Print Scr to screenshot into clipboard
 bindsym --release $mod+Print exec scrot -s -e 'xclip -selection clipboard -t "image/png" <$f'
 
@@ -193,3 +176,20 @@ bindsym $mod+bracketleft exec playerctl previous
 # Brightness controls
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 5
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 5
+
+# Apply .Xresource. 
+exec_always --no-startup-id xrdb ~/.Xresources
+
+# Apply the last colorscheme generated without changing the background by using -n 
+exec_always --no-startup-id wal -R -n
+
+# Apply a background different than the one used by wal
+# If this isn't needed, remove it and remove -n flag from the above command
+exec_always --no-startup-id feh --bg-fill ~/Pictures/Wal/bg2.jpg
+
+# Execute polybar on launch. Script kills current ones on i3 refresh, otherwise they duplicate
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh &amp;
+# exec_always --no--startup-id polybar bar &
+
+# Execute compton on launch
+exec_always --no-startup-id compton --config ~/.config/compton.conf
